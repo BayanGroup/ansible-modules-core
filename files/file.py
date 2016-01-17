@@ -222,6 +222,7 @@ def main():
             basename = os.path.basename(src)
         if basename:
             params['path'] = path = os.path.join(path, basename)
+            prev_state = get_state(path)
 
     # make sure the target path is a directory when we're doing a recursive operation
     recurse = params['recurse']
