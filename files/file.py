@@ -230,6 +230,7 @@ def main():
         if basename:
             params['path'] = path = os.path.join(path, basename)
             b_path = to_bytes(path, errors='surrogate_or_strict')
+            prev_state = get_state(path)
 
     # make sure the target path is a directory when we're doing a recursive operation
     recurse = params['recurse']
